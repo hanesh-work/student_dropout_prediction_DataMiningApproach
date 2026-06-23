@@ -125,7 +125,7 @@ These results show that early academic momentum matters more than pre-admission 
 
 ### ROC Curve
 
-[image:3]
+[image:20]
 
 The ROC curves show that the model separates the three outcomes reasonably well, with Graduate performing strongest and Enrolled performing more weakly. This supports the use of a multi-class classification approach for student retention analysis [file:20].
 
@@ -178,9 +178,9 @@ The violin plots suggest that dropouts tend to be older at enrollment, while adm
 ├── dropout_prediction_code.ipynb
 ├── dropout_prediction_report.pdf
 ├── Student_Dropout_Prediction_PPT.pptx
-├── image_1.jpg
-├── image_2.jpg
-├── image_3.jpg
+├── image_1.png
+├── image_2.png
+├── image_3.png
 └── README.md
 ```
 

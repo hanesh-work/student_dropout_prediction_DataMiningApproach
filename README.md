@@ -19,7 +19,7 @@
 
 This project applies data mining and machine learning to predict student attrition in higher education. The goal is to identify students at risk of dropping out early enough for academic advisors and institutions to intervene effectively.
 
-Using a dataset of 4,424 undergraduate records from the UCI Machine Learning Repository, the analysis examines academic performance, tuition status, scholarships, and demographic variables to model dropout risk [file:3].
+Using a dataset of 4,424 undergraduate records from the UCI Machine Learning Repository, the analysis examines academic performance, tuition status, scholarships, and demographic variables to model dropout risk.
 
 ---
 
@@ -34,13 +34,13 @@ The project focuses on four research questions:
 - Do age and admission grades differentiate dropouts from graduates?
 - Can a machine learning model predict at-risk students in real time?
 
-The final workflow includes cleaning, encoding, scaling, SMOTE-ENN resampling, Decision Tree modeling, hyperparameter tuning, and probability calibration [file:3][file:2].
+The final workflow includes cleaning, encoding, scaling, SMOTE-ENN resampling, Decision Tree modeling, hyperparameter tuning, and probability calibration.
 
 ---
 
 ## Dataset Overview
 
-The dataset includes 4,424 undergraduate students and 36 features across three major categories [file:3].
+The dataset includes 4,424 undergraduate students and 36 features across three major categories.
 
 ### Feature Groups
 
@@ -56,13 +56,13 @@ The target includes three student outcomes:
 - Dropout.
 - Enrolled.
 
-The modeling objective is to detect dropout risk and rank students by likelihood of attrition [file:3].
+The modeling objective is to detect dropout risk and rank students by likelihood of attrition.
 
 ---
 
 ## Data Processing
 
-The dataset was preprocessed to improve consistency and support modeling [file:3].
+The dataset was preprocessed to improve consistency and support modeling.
 
 ### Steps Performed
 
@@ -72,13 +72,13 @@ The dataset was preprocessed to improve consistency and support modeling [file:3
 - Standardized numerical variables with `StandardScaler`.
 - Addressed class imbalance with `SMOTE-ENN`.
 
-This preparation helped the model focus on meaningful retention patterns instead of being biased toward the majority class [file:3].
+This preparation helped the model focus on meaningful retention patterns instead of being biased toward the majority class.
 
 ---
 
 ## Analysis Approach
 
-The analysis was divided into two parts: exploratory diagnostics and predictive modeling [file:3].
+The analysis was divided into two parts: exploratory diagnostics and predictive modeling.
 
 ### Exploratory Diagnostics
 
@@ -98,7 +98,7 @@ The analysis was divided into two parts: exploratory diagnostics and predictive 
 
 ## Results Summary
 
-The final model achieved strong predictive ranking performance [file:3].
+The final model achieved strong predictive ranking performance.
 
 ### Performance Metrics
 
@@ -121,13 +121,15 @@ The strongest features included:
 2. Curricular Units 1st Sem (Approved).
 3. Age at Enrollment.
 
-These results show that early academic momentum matters more than pre-admission history alone [file:3][file:2].
+These results show that early academic momentum matters more than pre-admission history alone.
 
 ### ROC Curve
 
-[image:20]
+<p align="center">
+  <img src="image_1.png" alt="ROC Curve" width="900" />
+</p>
 
-The ROC curves show that the model separates the three outcomes reasonably well, with Graduate performing strongest and Enrolled performing more weakly. This supports the use of a multi-class classification approach for student retention analysis [file:20].
+The ROC curves show that the model separates the three outcomes reasonably well, with Graduate performing strongest and Enrolled performing more weakly. This supports the use of a multi-class classification approach for student retention analysis.
 
 ---
 
@@ -135,15 +137,19 @@ The ROC curves show that the model separates the three outcomes reasonably well,
 
 ### RQ1: Academic Tipping Point
 
-[image:22]
+<p align="center">
+  <img src="image_3.png" alt="Approved Units in 1st Semester by Final Outcome" width="900" />
+</p>
 
-The first-semester approved-units plot shows a clear separation between dropouts and graduates. Students approving fewer than 50% of enrolled units in the first semester are at immediate risk [file:22][file:3].
+The first-semester approved-units plot shows a clear separation between dropouts and graduates. Students approving fewer than 50% of enrolled units in the first semester are at immediate risk.
 
 ### RQ3: Demographic and Academic Preparation Profile
 
-[image:21]
+<p align="center">
+  <img src="image_2.png" alt="Demographic and Academic Preparation Profile by Final Outcome" width="900" />
+</p>
 
-The violin plots suggest that dropouts tend to be older at enrollment, while admission grades are more similar across groups. This indicates that current performance and current circumstances matter more than pre-admission grades [file:21][file:3].
+The violin plots suggest that dropouts tend to be older at enrollment, while admission grades are more similar across groups. This indicates that current performance and current circumstances matter more than pre-admission grades.
 
 ---
 
@@ -153,7 +159,7 @@ The violin plots suggest that dropouts tend to be older at enrollment, while adm
 - First-semester performance is the strongest early warning signal.
 - Tuition payment status is a major retention indicator.
 - High school grades are not enough to predict retention.
-- A calibrated machine learning model can support targeted intervention [file:3].
+- A calibrated machine learning model can support targeted intervention.
 
 ---
 
@@ -188,7 +194,7 @@ The violin plots suggest that dropouts tend to be older at enrollment, while adm
 
 ## Practical Use
 
-This project can help universities identify students who may need support early in the semester. Instead of using generic retention outreach, advisors can focus tutoring, counseling, and financial support on students with the highest predicted risk [file:3].
+This project can help universities identify students who may need support early in the semester. Instead of using generic retention outreach, advisors can focus tutoring, counseling, and financial support on students with the highest predicted risk.
 
 ---
 
@@ -204,4 +210,4 @@ This project can help universities identify students who may need support early 
 
 ## Acknowledgments
 
-This project was developed using the UCI Student Academic Performance dataset and inspired by prior work in educational data mining and student success prediction [file:3].
+This project was developed using the UCI Student Academic Performance dataset and inspired by prior work in educational data mining and student success prediction.

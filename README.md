@@ -15,28 +15,11 @@
 
 ---
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Project Overview](#project-overview)
-- [Dataset Overview](#dataset-overview)
-- [Data Processing](#data-processing)
-- [Analysis Approach](#analysis-approach)
-- [Results Summary](#results-summary)
-- [Key Findings](#key-findings)
-- [Tech Stack](#tech-stack)
-- [Repository Structure](#repository-structure)
-- [Practical Use](#practical-use)
-- [Future Improvements](#future-improvements)
-- [Acknowledgments](#acknowledgments)
-
----
-
 ## Introduction
 
-This project applies **data mining and machine learning** to predict student attrition in higher education. The goal is to identify students at risk of dropping out early enough for academic advisors and institutions to intervene effectively.
+This project applies data mining and machine learning to predict student attrition in higher education. The goal is to identify students at risk of dropping out early enough for academic advisors and institutions to intervene effectively.
 
-Using a dataset of 4,424 undergraduate records from the UCI Machine Learning Repository, the analysis examines academic performance, tuition status, scholarships, and demographic variables to model dropout risk.
+Using a dataset of 4,424 undergraduate records from the UCI Machine Learning Repository, the analysis examines academic performance, tuition status, scholarships, and demographic variables to model dropout risk [file:3].
 
 ---
 
@@ -51,19 +34,19 @@ The project focuses on four research questions:
 - Do age and admission grades differentiate dropouts from graduates?
 - Can a machine learning model predict at-risk students in real time?
 
-The final workflow includes cleaning, encoding, scaling, SMOTE-ENN resampling, Decision Tree modeling, hyperparameter tuning, and probability calibration.
+The final workflow includes cleaning, encoding, scaling, SMOTE-ENN resampling, Decision Tree modeling, hyperparameter tuning, and probability calibration [file:3][file:2].
 
 ---
 
 ## Dataset Overview
 
-The dataset includes **4,424 undergraduate students** and **36 features** across three major categories.
+The dataset includes 4,424 undergraduate students and 36 features across three major categories [file:3].
 
 ### Feature Groups
 
-- **Academic performance:** enrolled units, evaluations, approved units, and grades.
-- **Socio-economic status:** tuition status, scholarship status, unemployment rate, and GDP-related variables.
-- **Demographics:** age at enrollment, gender, marital status, and displaced status.
+- Academic performance: enrolled units, evaluations, approved units, and grades.
+- Socio-economic status: tuition status, scholarship status, unemployment rate, and GDP-related variables.
+- Demographics: age at enrollment, gender, marital status, and displaced status.
 
 ### Target Variable
 
@@ -73,13 +56,13 @@ The target includes three student outcomes:
 - Dropout.
 - Enrolled.
 
-The modeling objective is to detect dropout risk and rank students by likelihood of attrition.
+The modeling objective is to detect dropout risk and rank students by likelihood of attrition [file:3].
 
 ---
 
 ## Data Processing
 
-The dataset was preprocessed to improve consistency and support modeling.
+The dataset was preprocessed to improve consistency and support modeling [file:3].
 
 ### Steps Performed
 
@@ -89,13 +72,13 @@ The dataset was preprocessed to improve consistency and support modeling.
 - Standardized numerical variables with `StandardScaler`.
 - Addressed class imbalance with `SMOTE-ENN`.
 
-This preparation helped the model focus on meaningful retention patterns instead of being biased toward the majority class.
+This preparation helped the model focus on meaningful retention patterns instead of being biased toward the majority class [file:3].
 
 ---
 
 ## Analysis Approach
 
-The analysis was divided into two parts: exploratory diagnostics and predictive modeling.
+The analysis was divided into two parts: exploratory diagnostics and predictive modeling [file:3].
 
 ### Exploratory Diagnostics
 
@@ -106,22 +89,22 @@ The analysis was divided into two parts: exploratory diagnostics and predictive 
 
 ### Predictive Modeling
 
-- A **Decision Tree classifier** was selected for interpretability.
-- **RandomizedSearchCV** was used for hyperparameter tuning.
-- The model was calibrated with **sigmoid scaling** to improve probability reliability.
+- A Decision Tree classifier was selected for interpretability.
+- RandomizedSearchCV was used for hyperparameter tuning.
+- The model was calibrated with sigmoid scaling to improve probability reliability.
 - The decision threshold was adjusted to prioritize recall and catch more at-risk students.
 
 ---
 
 ## Results Summary
 
-The final model achieved strong predictive ranking performance.
+The final model achieved strong predictive ranking performance [file:3].
 
 ### Performance Metrics
 
-- **ROC AUC:** 0.835
-- **Accuracy:** 62.37%
-- **F1 Score:** 60.67%
+- ROC AUC: 0.835
+- Accuracy: 62.37%
+- F1 Score: 60.67%
 
 ### Interpretation
 
@@ -138,7 +121,29 @@ The strongest features included:
 2. Curricular Units 1st Sem (Approved).
 3. Age at Enrollment.
 
-These results show that early academic momentum matters more than pre-admission history alone.
+These results show that early academic momentum matters more than pre-admission history alone [file:3][file:2].
+
+### ROC Curve
+
+[image:3]
+
+The ROC curves show that the model separates the three outcomes reasonably well, with Graduate performing strongest and Enrolled performing more weakly. This supports the use of a multi-class classification approach for student retention analysis [file:20].
+
+---
+
+## Key Figures
+
+### RQ1: Academic Tipping Point
+
+[image:22]
+
+The first-semester approved-units plot shows a clear separation between dropouts and graduates. Students approving fewer than 50% of enrolled units in the first semester are at immediate risk [file:22][file:3].
+
+### RQ3: Demographic and Academic Preparation Profile
+
+[image:21]
+
+The violin plots suggest that dropouts tend to be older at enrollment, while admission grades are more similar across groups. This indicates that current performance and current circumstances matter more than pre-admission grades [file:21][file:3].
 
 ---
 
@@ -148,7 +153,7 @@ These results show that early academic momentum matters more than pre-admission 
 - First-semester performance is the strongest early warning signal.
 - Tuition payment status is a major retention indicator.
 - High school grades are not enough to predict retention.
-- A calibrated machine learning model can support targeted intervention.
+- A calibrated machine learning model can support targeted intervention [file:3].
 
 ---
 
@@ -173,7 +178,9 @@ These results show that early academic momentum matters more than pre-admission 
 ├── dropout_prediction_code.ipynb
 ├── dropout_prediction_report.pdf
 ├── Student_Dropout_Prediction_PPT.pptx
-├── data.csv
+├── image_1.jpg
+├── image_2.jpg
+├── image_3.jpg
 └── README.md
 ```
 
@@ -181,7 +188,7 @@ These results show that early academic momentum matters more than pre-admission 
 
 ## Practical Use
 
-This project can help universities identify students who may need support early in the semester. Instead of using generic retention outreach, advisors can focus tutoring, counseling, and financial support on students with the highest predicted risk.
+This project can help universities identify students who may need support early in the semester. Instead of using generic retention outreach, advisors can focus tutoring, counseling, and financial support on students with the highest predicted risk [file:3].
 
 ---
 
@@ -197,4 +204,4 @@ This project can help universities identify students who may need support early 
 
 ## Acknowledgments
 
-This project was developed using the **UCI Student Academic Performance dataset** and inspired by prior work in educational data mining and student success prediction.
+This project was developed using the UCI Student Academic Performance dataset and inspired by prior work in educational data mining and student success prediction [file:3].

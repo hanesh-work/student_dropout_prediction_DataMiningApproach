@@ -126,7 +126,7 @@ These results show that early academic momentum matters more than pre-admission 
 ### ROC Curve
 
 <p align="center">
-  <img src="image_1.png" alt="ROC Curve" width="900" />
+  <img src="images/image_1.png" alt="ROC Curve" width="900" />
 </p>
 
 The ROC curves show that the model separates the three outcomes reasonably well, with Graduate performing strongest and Enrolled performing more weakly. This supports the use of a multi-class classification approach for student retention analysis.
@@ -138,7 +138,7 @@ The ROC curves show that the model separates the three outcomes reasonably well,
 ### RQ1: Academic Tipping Point
 
 <p align="center">
-  <img src="image_3.png" alt="Approved Units in 1st Semester by Final Outcome" width="900" />
+  <img src="images/image_3.png" alt="Approved Units in 1st Semester by Final Outcome" width="900" />
 </p>
 
 The first-semester approved-units plot shows a clear separation between dropouts and graduates. Students approving fewer than 50% of enrolled units in the first semester are at immediate risk.
@@ -146,7 +146,7 @@ The first-semester approved-units plot shows a clear separation between dropouts
 ### RQ3: Demographic and Academic Preparation Profile
 
 <p align="center">
-  <img src="image_2.png" alt="Demographic and Academic Preparation Profile by Final Outcome" width="900" />
+  <img src="images/image_2.png" alt="Demographic and Academic Preparation Profile by Final Outcome" width="900" />
 </p>
 
 The violin plots suggest that dropouts tend to be older at enrollment, while admission grades are more similar across groups. This indicates that current performance and current circumstances matter more than pre-admission grades.
@@ -184,9 +184,10 @@ The violin plots suggest that dropouts tend to be older at enrollment, while adm
 ├── dropout_prediction_code.ipynb
 ├── dropout_prediction_report.pdf
 ├── Student_Dropout_Prediction_PPT.pptx
-├── image_1.png
-├── image_2.png
-├── image_3.png
+├── image/
+│   ├── image_1.png
+│   ├── image_2.png
+│   └── image_3.png
 └── README.md
 ```
 
